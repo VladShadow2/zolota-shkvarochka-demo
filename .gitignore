@@ -38,6 +38,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# cloudflare
+.wrangler
+
 # editor and OS leftovers
 .DS_Store
 Thumbs.db
