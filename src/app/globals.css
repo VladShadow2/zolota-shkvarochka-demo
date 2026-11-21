@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6efe4;
+  --foreground: #2a1814;
+  --muted: #6a5348;
+  --cream: #f6efe4;
+  --cream-deep: #efe2cf;
+  --paper: #fffaf3;
+  --ink: #2a1814;
+  --burgundy: #722033;
+  --burgundy-deep: #541824;
+  --gold: #a67c3d;
+  --gold-soft: #c6a15b;
+  --line: rgba(114, 32, 51, 0.22);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-cream: var(--cream);
+  --color-cream-deep: var(--cream-deep);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-burgundy: var(--burgundy);
+  --color-burgundy-deep: var(--burgundy-deep);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-line: var(--line);
+  --font-sans: var(--font-manrope);
+  --font-serif: var(--font-oranienbaum);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: clip;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-manrope), sans-serif;
+}
+
+::selection {
+  background: #722033;
+  color: #f6efe4;
+}
+
+:focus-visible {
+  outline: 2px solid #722033;
+  outline-offset: 3px;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+select {
+  color-scheme: light;
+}
+
+dialog.gallery-dialog {
+  width: min(96vw, 72rem);
+  max-width: calc(100% - 0.75rem);
+  max-height: calc(100svh - 0.75rem);
+  margin: auto;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+}
+
+@keyframes gallery-fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.gallery-fade {
+  animation: gallery-fade 320ms ease;
+}
+
+@keyframes menu-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.menu-reveal {
+  animation: menu-reveal 420ms ease;
+}
+
+dialog.gallery-dialog::backdrop {
+  background: rgba(42, 24, 20, 0.72);
+}
