@@ -17,7 +17,7 @@ export default function MenuPage() {
     <>
       <PageHero
         eyebrow="Меню"
-        title="Стіл, який ще складається"
+        title="Приклад меню"
         text="Ціни навмисно не вказані. Кожен рядок — умовний приклад, а не картка закладу."
         image={photo.src}
         alt={photo.alt}

@@ -17,8 +17,8 @@ export function GalleryPreview() {
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading
             eyebrow="Галерея"
-            title="Три кадри, поки своїх немає"
-            text="Фото не з закладу. Під кожним стоїть позначка, що це ілюстрація."
+            title="Атмосфера зали"
+            text="Це ілюстративні фото, не знімки закладу. Позначка є на кожному кадрі."
           />
           <Link
             href="/gallery"
@@ -30,7 +30,7 @@ export function GalleryPreview() {
         <ul className="mt-10 grid grid-cols-1 gap-4 min-[760px]:grid-cols-12">
           {gallery.map((item, index) => (
             <li key={item.src} className={frames[index]}>
-              <Link href="/gallery" className="group flex h-full flex-col">
+              <Link href="/gallery" aria-label={`${item.caption}. ${item.alt}`} className="group flex h-full flex-col">
                 <div className="relative min-h-0 flex-1 overflow-hidden bg-cream-deep">
                   <Image
                     src={item.src}

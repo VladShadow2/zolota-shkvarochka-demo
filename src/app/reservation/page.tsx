@@ -17,7 +17,7 @@ export default function ReservationPage() {
     <>
       <PageHero
         eyebrow="Бронювання"
-        title="Лише спроба форми"
+        title="Бронювання столу"
         text={site.reservationNote}
         image={photo.src}
         alt={photo.alt}

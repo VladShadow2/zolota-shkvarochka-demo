@@ -20,11 +20,29 @@ const sans = Manrope({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
   title: {
     default: site.fullName,
     template: `%s · ${site.fullName}`,
   },
   description: site.description,
+  alternates: {
+    canonical: "./",
+  },
+  openGraph: {
+    type: "website",
+    locale: "uk_UA",
+    siteName: site.fullName,
+    url: "./",
+    images: [
+      {
+        url: "/images/interior.jpg",
+        width: 1800,
+        height: 1200,
+        alt: "Ілюстративне фото зали. Це не знімок закладу.",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

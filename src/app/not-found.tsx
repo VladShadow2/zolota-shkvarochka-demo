@@ -1,5 +1,10 @@
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/layout/Container";
+
+export const metadata: Metadata = {
+  title: "Сторінку не знайдено",
+};
 
 export default function NotFound() {
   return (

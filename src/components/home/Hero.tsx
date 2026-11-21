@@ -28,7 +28,7 @@ export function Hero() {
             {site.name}
           </h1>
           <p className="mt-5 max-w-md text-base leading-7 text-cream/95">
-            Вечірня зала в місті {site.venue.city}: довгий стіл, тепле світло і демонстрація сайту, яка стіл не резервує.
+            Вечірня зала в Чернівцях: довгий стіл і тепле світло. Ця форма стіл не бронює.
           </p>
           <div className="mt-8">
             <Button href="/reservation" className="w-full bg-gold text-ink hover:bg-gold-soft sm:w-auto">
